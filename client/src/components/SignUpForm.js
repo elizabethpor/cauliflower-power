@@ -7,23 +7,10 @@ function SignUpForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [sellerTrue, setSellerTrue] = useState(false);
-  const [sellerFalse, setSellerFalse] = useState(true);
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [seller, setSeller] = useState(false)
   
   const history = useHistory();
-
-  function handleSellerTrue() {
-    setSellerTrue(!sellerTrue)
-    setSeller(!seller)
-}
-
-  function handleSellerFalse() {
-    setSellerFalse(!setSellerFalse)
-    setSeller(!seller)
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,14 +25,12 @@ function SignUpForm({ onLogin }) {
         username,
         password,
         password_confirmation: passwordConfirmation,
-        seller
       }),
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => onLogin(user));
-        if (seller) return history.push("/sellerpage")
-        else return history.push("/")
+        return history.push("/")
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -83,25 +68,6 @@ function SignUpForm({ onLogin }) {
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
-      </FormField>
-      <FormField>
-        <InputLabel id="select-label">Are you a seller?</InputLabel>
-        <div>
-            <input
-            type="radio"
-            value={sellerTrue}
-            checked={seller === true}
-            onClick={handleSellerTrue}
-            /> yes
-        </div>
-        <div>
-            <input
-            type="radio"
-            value={sellerFalse}
-            checked={seller === false}
-            onClick={handleSellerFalse}
-            /> no
-        </div>
       </FormField>
       <FormField>
         <Button type="submit">{isLoading ? "Loading..." : "Sign Up"}</Button>
