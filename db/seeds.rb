@@ -8,8 +8,6 @@ puts "Seeding users..."
 User.create(username: "elizabeth", password: "elizabethiscool", password_confirmation: "elizabethiscool")
 
 puts "Seeding recipes..."
-# blt = Recipe.create(name: "blt", allergy_code: "vegan", ingredient_list: ["1 slice tomato", "2 slices bacon"], instructions: "put it together")
-# salad = Recipe.create(name: "salad", allergy_code: "gf", ingredient_list: ["3 lettuce leaves", "1 quartered tomato"], instructions: "toss it together")
 
 chinese_fried_rice = Recipe.create(name: "Chinese fried rice", allergy_code: "GF, VE, NF", ingredient_list: ["2 Tbsp sunflower oil", "1/2 cup broccoli - chopped", "1/8 cup onion - sliced", "1/2 cup carrot - julienned", "1/4 cup mirin", "1/4 cup bell pepper - diced", "1/4 cup asparagus - diced", "1 Tbsp GF soy sauce", "1/8 tsp chili flakes", "1/8 cup parsley - minced", "1/8 cup sesame oil", "1 1/2 cup rice - boiled"], instructions: "Put half of the sunflower oil in a large skillet on medium heat. Add broccoli, onion, carrot, and cook, stirring often, for a couple of minutes. Add mirin. Add bell pepper and asparagus. Season with soy sauce, chili flakes, and parsley. Cook until veggies are al dente. Remove from the pan, set aside. 
 Put the rest of the sunflower oil and the sesame oil in the skillet over medium heat, add the rice, stir often until crispy. Add the veggies. Mix until combined. Serve hot.")
@@ -123,8 +121,6 @@ Season the tomato sauce with the salt, the dried basil, and the olive oil. Cover
 mediterranean_salad = Recipe.create(name: "Mediterranean salad", allergy_code: "GF, VE, NF", ingredient_list: ["1 1/2 cup lettuce - chopped", "1/2 cup tomatoes - small diced", "1/8 cup olives - pitted and chopped", "1/4 cup cucumber - small diced", "1 Tbsp mint - chopped", "1 1/2 Tbsp olive oil", "1/2 Tbsp red wine vinegar", "1/4 tsp salt", "1/4 tsp black pepper"], instructions: "In a large bowl, combine all veggies. In a jar combine the mint, the olive oil, the vinegar, the salt and the pepper and shake well. Pur the dressing on the salad and toss well.")
 
 puts "Seeding ingredients..."
-# lettuce = Ingredient.create(name: "lettuce")
-# tomato = Ingredient.create(name: "tomato")
 
 broccoli = Ingredient.create(name: "broccoli")
 carrot = Ingredient.create(name: "carrot")
@@ -169,9 +165,6 @@ corn = Ingredient.create(name: "corn on the cob")
 bean_sprout = Ingredient.create(name: "bean sprout")
 
 puts "Connecting recipes and ingredients..."
-# blt.ingredients << [tomato, lettuce]
-# salad.ingredients << [lettuce]
-
 
 chinese_fried_rice.ingredients << [broccoli, onion, carrot, bell_pepper, asparagus, parsley]
 pasta_e_fagioli.ingredients << [onion, garlic, celery, carrot, parsley, kale]
