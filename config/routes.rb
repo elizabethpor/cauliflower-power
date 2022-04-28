@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/charges', to: 'charges#purchase'
   resources :recipes, only: [:index]
   resources :ingredients, only: [:index]
 
