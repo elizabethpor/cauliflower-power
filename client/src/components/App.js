@@ -3,6 +3,9 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Home from "./Home";
+import Checkout from './Checkout';
+import Success from './Success';
+import Canceled from './Canceled';
 import './App.css';
 
 function App() {
@@ -33,6 +36,15 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login onLogin={setUser} />
+        </Route>
+        <Route path="/success">
+          <Success />
+        </Route>
+        <Route path="/canceled">
+          <Canceled />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
       </Switch>
     </>

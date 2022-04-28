@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 function Home() {
   
     return (
       <Wrapper>
           <h1>home</h1>
+          <Link to="/checkout"><button>Purchase the Comida book</button></Link>
       </Wrapper>
     );
   }
