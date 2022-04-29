@@ -28,7 +28,6 @@ function LoginForm({ onLogin }) {
         console.log("logged in");
         console.log(user.seller);
         history.push("/ingredients")
-        //change to push to "/ingredients" when IngredientList is ready
       })
       } else {
         r.json().then((err) => setErrors(err.errors));

@@ -19,19 +19,9 @@ function Home({user, setUser}) {
           </p>
         </Grid>
       </Grid>
-      // <Wrapper>
-          
-      //     {/* <Link to="/checkout"><button>Purchase the Comida book</button></Link> */}
-      // </Wrapper>
     );
   }
   
-  const Logo = styled.h1`
-    font-family: "Permanent Marker", cursive;
-    font-size: 3rem;
-    color: deeppink;
-    margin: 8px 0 16px;
-  `;
   
   const Wrapper = styled.section`
     max-width: 500px;

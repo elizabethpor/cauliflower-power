@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 function Header() {
-
+// add some logic: if logged in link to "/ingredients", if not logged in link to "/"
     return (
         <div>
             <Wrapper>
