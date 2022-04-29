@@ -5,7 +5,6 @@ import { Button } from "../styles";
 
 
 function NavBar({ user, setUser}) {
-    console.log(window.location.pathname)
     const history = useHistory();
     
     function handleLogoutClick() {

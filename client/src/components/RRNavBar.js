@@ -5,7 +5,6 @@ import { Button } from "../styles";
 
 function RRNavBar({user, setUser}) {
     
-    console.log(window.location.pathname)
     const history = useHistory();
     
     function handleLogoutClick() {

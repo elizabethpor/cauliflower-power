@@ -26,7 +26,6 @@ function LoginForm({ onLogin }) {
         r.json().then((user) => {
           onLogin(user);
         console.log("logged in");
-        console.log(user.seller);
         history.push("/ingredients")
       })
       } else {

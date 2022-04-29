@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   post '/charges', to: 'charges#purchase'
-  resources :recipes, only: [:index]
+  resources :recipes, only: [:index, :show]
   resources :ingredients, only: [:index]
 
   # Login / Logout Routes

@@ -6,6 +6,7 @@ import Login from "./Login";
 import IngredientList from "./IngredientList";
 import StapleIngredients from "./StapleIngredients";
 import RecipeResults from "./RecipeResults";
+import RecipeDetail from "./RecipeDetail";
 import Checkout from './Checkout';
 import Success from './Success';
 import Canceled from './Canceled';
@@ -31,13 +32,15 @@ function App() {
   }, []);
 
       // fetch ingredients
+    useEffect(() => {
       fetch("/ingredients").then((r) => {
         if (r.ok) {
           r.json().then((ingredients) => {
-          // console.log(ingredients)
+          console.log(ingredients)
           setIngredients(ingredients)
           });
         }
+      })
     }, []);
 
   // if (!user) return <Login onLogin={setUser} />;
@@ -60,6 +63,9 @@ function App() {
         </Route>
         <Route exact path="/recipe-results">
           <RecipeResults user={user} setUser={setUser}/>
+        </Route>
+        <Route exact path="/recipes/:id">
+          <RecipeDetail user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/checkout">
           <Checkout />
