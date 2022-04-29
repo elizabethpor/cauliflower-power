@@ -9,7 +9,6 @@ function Login({ onLogin }) {
 
   return (
     <Wrapper>
-      {/* <Logo>Log in</Logo> */}
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />

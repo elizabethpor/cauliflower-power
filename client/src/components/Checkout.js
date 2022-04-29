@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import "./App.css";
+import { Button } from "../styles";
 
 const ProductDisplay = () => (
     <section>
@@ -14,9 +15,10 @@ const ProductDisplay = () => (
         </div>
         </div>
         <form action="/charges" method="POST">
-        <button type="submit">
+        <Button tyoe="submit">Checkout</Button>
+        {/* <button type="submit">
             Checkout
-        </button>
+        </button> */}
         </form>
     </section>
 );

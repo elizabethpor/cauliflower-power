@@ -27,9 +27,8 @@ function LoginForm({ onLogin }) {
           onLogin(user);
         console.log("logged in");
         console.log(user.seller);
-        history.push("/")
-        // if (user.seller) return history.push("/sellerpage")
-        // else return history.push("/")
+        history.push("/ingredients")
+        //change to push to "/ingredients" when IngredientList is ready
       })
       } else {
         r.json().then((err) => setErrors(err.errors));

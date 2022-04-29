@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-import Login from "./Login";
-import NavBar from "./NavBar";
+import Header from "./Header";
 import Home from "./Home";
+import Login from "./Login";
+import IngredientList from "./IngredientList";
 import Checkout from './Checkout';
 import Success from './Success';
 import Canceled from './Canceled';
@@ -11,7 +12,6 @@ import './App.css';
 function App() {
 
   const [user, setUser] = useState(null);
-  const [errors, setErrors] = useState([])
 
   const history = useHistory()
 
@@ -30,22 +30,25 @@ function App() {
 
   return (
     <>
-      <NavBar user={user} setUser={setUser}/>
+      <Header/>
       <Switch>
         <Route exact path="/">
-          <Home /> 
+          <Home user={user} setUser={setUser}/> 
         </Route>
         <Route exact path="/login">
           <Login onLogin={setUser} />
         </Route>
-        <Route path="/success">
+        <Route exact path="/ingredients">
+          <IngredientList />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout />
+        </Route>
+        <Route exact path="/success">
           <Success />
         </Route>
-        <Route path="/canceled">
+        <Route exact path="/canceled">
           <Canceled />
-        </Route>
-        <Route path="/checkout">
-          <Checkout />
         </Route>
       </Switch>
     </>

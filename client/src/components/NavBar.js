@@ -18,19 +18,23 @@ function NavBar({ user, setUser}) {
     }
 
     return (
-        <Wrapper>
-        <Logo>
-            <Link to="/" exact>CauliflowerPower</Link>
-        </Logo>
-        <Nav>
+        <>
+
+        {/* <Nav> */}
             {!user ? <Button as={Link} to="/login" exact>
             Login
             </Button> :
             <Button variant="outline" onClick={handleLogoutClick}>
             Logout
             </Button>}
-        </Nav>
-        </Wrapper>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Button as={Link} to="/checkout" exact>Comida book </Button>
+        {/* </Nav> */}
+
+        </>
     );
     }
 
@@ -41,25 +45,12 @@ function NavBar({ user, setUser}) {
     padding: 8px;
     `;
 
-    const Logo = styled.h1`
-    font-family: 'Tapestry', cursive;
-    font-weight: lighter;
-    font-size: 4rem;
-    color: royalBlue;
-    margin: 0;
-    line-height: 1;
 
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-    `;
-
-    const Nav = styled.nav`
-    display: flex;
-    gap: 4px;
-    position: absolute;
-    right: 8px;
-    `;
+    // const Nav = styled.nav`
+    // display: flex;
+    // gap: 4px;
+    // position: absolute;
+    // right: 8px;
+    // `;
 
     export default NavBar;
