@@ -28,7 +28,7 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients}) {
             <Grid item xs={10} md={10}>
 
                 <h1>What do you have in your fridge?</h1>
-                <h2>- select your ingredients -</h2>
+                <h3>- select your ingredients -</h3>
 
                 <ImageList sx={{ width: 1000, height: 800 }} cols={4}>
                     <br></br>

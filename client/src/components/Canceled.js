@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from "../styles";
 
 const Canceled = () => {
     return (
@@ -10,7 +11,7 @@ const Canceled = () => {
                 </header>
                 <div className="sr-payment-summary completed-view">
                 <h1>Your payment was canceled</h1>
-                <Link to="/">Home</Link>
+                <Button as={Link} to="/" exact>Back to home</Button>
                 </div>
             </div>
         </div>

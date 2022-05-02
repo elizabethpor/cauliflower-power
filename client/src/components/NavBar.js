@@ -19,7 +19,6 @@ function NavBar({ user, setUser}) {
     return (
         <>
 
-        {/* <Nav> */}
             {!user ? <Button as={Link} to="/login" exact>
             Login
             </Button> :
@@ -30,8 +29,7 @@ function NavBar({ user, setUser}) {
             <br></br>
             <br></br>
             <br></br>
-            <Button as={Link} to="/checkout" exact>Comida book </Button>
-        {/* </Nav> */}
+            <Button as={Link} to="/comida-book" exact>Comida book </Button>
 
         </>
     );

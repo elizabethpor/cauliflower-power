@@ -7,6 +7,7 @@ import IngredientList from "./IngredientList";
 import StapleIngredients from "./StapleIngredients";
 import RecipeResults from "./RecipeResults";
 import RecipeDetail from "./RecipeDetail";
+import ComidaBook from "./ComidaBook";
 import Checkout from './Checkout';
 import Success from './Success';
 import Canceled from './Canceled';
@@ -66,6 +67,9 @@ function App() {
         </Route>
         <Route exact path="/recipes/:id">
           <RecipeDetail user={user} setUser={setUser}/>
+        </Route>
+        <Route exact path="/comida-book">
+          <ComidaBook user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/checkout">
           <Checkout />

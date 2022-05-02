@@ -21,7 +21,7 @@ function INavBar({user, setUser}) {
 
         {/* <Nav> */}
 
-            <Button as={Link} to="/checkout" exact>Comida book </Button>
+            <Button as={Link} to="/comida-book" exact>Comida book </Button>
             <br></br>
             <br></br>
             <br></br>

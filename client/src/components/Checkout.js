@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import "./App.css";
 import { Button } from "../styles";
 
 const ProductDisplay = () => (
     <section>
         <div className="product">
-        <img
-            src="https://i.imgur.com/EHyR2nP.png"
+        <img 
+            class="w-10"
+            src={process.env.PUBLIC_URL + "/assets/comida-cover.png"}
             alt="The cover of Comida book"
         />
         <div className="description">
@@ -15,10 +17,8 @@ const ProductDisplay = () => (
         </div>
         </div>
         <form action="/charges" method="POST">
-        <Button tyoe="submit">Checkout</Button>
-        {/* <button type="submit">
-            Checkout
-        </button> */}
+        <Button type="submit">Checkout</Button>
+        <Button as={Link} to="/comida-book" exact>Back</Button>
         </form>
     </section>
 );
