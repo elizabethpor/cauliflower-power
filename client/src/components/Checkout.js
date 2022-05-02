@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import "./App.css";
 import { Button } from "../styles";
+import cover from "../assets/cover.jpg"
 
 const ProductDisplay = () => (
     <section>
         <div className="product">
         <img 
             class="w-10"
-            src={process.env.PUBLIC_URL + "/assets/comida-cover.png"}
+            src={cover}
             alt="The cover of Comida book"
         />
         <div className="description">

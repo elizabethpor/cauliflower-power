@@ -1,18 +1,36 @@
 import React from "react";
 import ImageGallery from 'react-image-gallery';
+import cover from "../assets/cover.jpg";
+import firstpage from "../assets/firstpage.jpg";
+import list from "../assets/list.jpg";
+import friedrice from "../assets/friedrice.jpg";
+import paella from "../assets/paella.jpg";
+import ricebowl from "../assets/ricebowl.jpg";
 
 const images = [
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: `${cover}`,
+    thumbnail: `${cover}`,
   },
   {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    original: `${firstpage}`,
+    thumbnail: `${firstpage}`,
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    original: `${list}`,
+    thumbnail: `${list}`,
+  },
+  {
+    original: `${friedrice}`,
+    thumbnail: `${friedrice}`,
+  },
+  {
+    original: `${paella}`,
+    thumbnail: `${paella}`,
+  },
+  {
+    original: `${ricebowl}`,
+    thumbnail: `${ricebowl}`,
   },
 ];
 
