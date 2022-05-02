@@ -4,7 +4,7 @@ import RDNavBar from "./RDNavBar";
 import { Link, useParams } from "react-router-dom";
 
 function RecipeDetail({user, setUser}) {
-    const [recipe, setRecipe] = useState([])
+    const [recipe, setRecipe] = useState()
 
   function LoadItem(id) {
     fetch(`/recipes/${id}`)
@@ -21,7 +21,9 @@ function RecipeDetail({user, setUser}) {
   useEffect(() => {
     LoadItem(data.id);
   }, [data]);
- 
+
+  if (!recipe) return null
+
   const ingredients = recipe.ingredient_list.map((ingredient) => <li>{ingredient}</li>);
 
     return (

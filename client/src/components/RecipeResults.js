@@ -13,7 +13,7 @@ function RecipeResults({user, setUser}) {
         fetch("/recipes").then((r) => {
             if (r.ok) {
                 r.json().then((recipes) => {
-                // console.log(recipes)
+                console.log(recipes)
                 setRecipes(recipes)
                 });
             }
