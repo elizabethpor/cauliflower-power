@@ -30,7 +30,7 @@ function RecipeDetail({user, setUser}) {
                 <Grid item xs={2} md={2}>
                     <RDNavBar  user={user} setUser={setUser}/>
             </Grid>
-            <Grid item xs={12} md={12}></Grid>
+            <Grid item xs={10} md={10}>
                 <h1>{recipe.name}</h1>
                 <h3>{recipe.allergy_code}</h3>
                 <h2>Ingredients list:</h2>
@@ -40,19 +40,9 @@ function RecipeDetail({user, setUser}) {
                 <h2>Instructions</h2>
                 <p>{recipe.instructions}</p>
             </Grid>
+            </Grid>
         </div>
     )
-    // return (
-    //     <div>
-    //         <Grid container spacing={2}>
-    //         <Grid item xs={2} md={2}>
-    //             <RDNavBar  user={user} setUser={setUser}/>
-    //         </Grid>
-    //         <Grid item xs={12} md={12}></Grid>
-            
-    //         </Grid>
-    //     </div>
-    // )
 };
 
 export default RecipeDetail;

@@ -27,7 +27,7 @@ function RecipeResults({user, setUser}) {
             <Grid item xs={2} md={2}>
                 <RRNavBar  user={user} setUser={setUser}/>
             </Grid>
-            <Grid item xs={12} md={12}></Grid>
+            <Grid item xs={10} md={10}>
             <ImageList sx={{ width: 1000, height: 800 }} cols={3}>
                     <br></br>
                     <ImageListItem key="Subheader" cols={3}>
@@ -41,6 +41,7 @@ function RecipeResults({user, setUser}) {
                     <Recipe key={recipe.id} recipe={recipe}/>
                     </div>
                 ))} */}
+            </Grid>
             </Grid>
         </div>
     )
