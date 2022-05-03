@@ -2,7 +2,7 @@ class IngredientsController < ApplicationController
 # before_action :authorize
 
     def index
-        render json: Ingredient.all
+        render json: Ingredient.all.order(:name)
     end
 
     private
