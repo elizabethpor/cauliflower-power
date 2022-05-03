@@ -74,7 +74,7 @@ function App() {
           <StapleIngredients user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/recipe-results">
-          <RecipeResults user={user} setUser={setUser} recipes={recipes}/>
+          <RecipeResults user={user} setUser={setUser} recipes={recipes} setSelectedIngredients={setSelectedIngredients}/>
         </Route>
         <Route exact path="/recipes/:id">
           <RecipeDetail user={user} setUser={setUser}/>

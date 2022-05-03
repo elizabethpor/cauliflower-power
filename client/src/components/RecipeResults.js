@@ -5,7 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Recipe from "./Recipe";
 import RRNavBar from "./RRNavBar";
 
-function RecipeResults({user, setUser, recipes}) {
+function RecipeResults({user, setUser, recipes, setSelectedIngredients}) {
 
     // const [recipes, setRecipes] = useState([]);
 
@@ -25,7 +25,7 @@ function RecipeResults({user, setUser, recipes}) {
         <div>
             <Grid container spacing={2}>
             <Grid item xs={2} md={2}>
-                <RRNavBar  user={user} setUser={setUser}/>
+                <RRNavBar  user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
             </Grid>
             <Grid item xs={10} md={10}>
             <ImageList sx={{ width: 1000, height: 800 }} cols={3}>

@@ -3,10 +3,15 @@ import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles";
 
-function RRNavBar({user, setUser}) {
+function RRNavBar({user, setUser, setSelectedIngredients}) {
     
     const history = useHistory();
     
+    function handleBackClick() {
+        setSelectedIngredients([])
+        history.push("/ingredients")
+    }
+
     function handleLogoutClick() {
         fetch("/logout", { method: "DELETE" }).then((r) => {
         if (r.ok) {
@@ -25,7 +30,9 @@ function RRNavBar({user, setUser}) {
             <br></br>
             <br></br>
             <br></br>
-            <Button as={Link} to="/ingredients" exact>Back to ingredients</Button>
+            <Button onClick={handleBackClick}>Back to ingredients</Button>
+
+            {/* <Button as={Link} to="/ingredients" exact>Back to ingredients</Button> */}
             <br></br>
             <br></br>
             <br></br>
