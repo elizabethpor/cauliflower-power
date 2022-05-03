@@ -18,6 +18,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [ingredients, setIngredients] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const [recipes, setRecipes] = useState([]);
 
   const history = useHistory()
 
@@ -44,7 +45,17 @@ function App() {
       })
     }, []);
 
-  // if (!user) return <Login onLogin={setUser} />;
+  function onSubmitIngredients() {
+    fetch(`/recipes?ingredients=${selectedIngredients}`).then((r) => {
+      if (r.ok) {
+        r.json().then((recipes) => {
+        console.log(recipes)
+        setRecipes(recipes)
+        history.push("/recipe-results")
+        });
+      }
+    })
+  };
 
   return (
     <>
@@ -57,13 +68,13 @@ function App() {
           <Login onLogin={setUser} />
         </Route>
         <Route exact path="/ingredients">
-          <IngredientList ingredients={ingredients} user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
+          <IngredientList ingredients={ingredients} user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients} onSubmitIngredients={onSubmitIngredients}/>
         </Route>
         <Route exact path="/staple-ingredients">
           <StapleIngredients user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/recipe-results">
-          <RecipeResults user={user} setUser={setUser}/>
+          <RecipeResults user={user} setUser={setUser} recipes={recipes}/>
         </Route>
         <Route exact path="/recipes/:id">
           <RecipeDetail user={user} setUser={setUser}/>

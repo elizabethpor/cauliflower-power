@@ -5,20 +5,20 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Recipe from "./Recipe";
 import RRNavBar from "./RRNavBar";
 
-function RecipeResults({user, setUser}) {
+function RecipeResults({user, setUser, recipes}) {
 
-    const [recipes, setRecipes] = useState([]);
+    // const [recipes, setRecipes] = useState([]);
 
-    useEffect(() => {
-        fetch("/recipes").then((r) => {
-            if (r.ok) {
-                r.json().then((recipes) => {
-                console.log(recipes)
-                setRecipes(recipes)
-                });
-            }
-        });
-    }, []);
+    // useEffect(() => {
+    //     fetch("/recipes").then((r) => {
+    //         if (r.ok) {
+    //             r.json().then((recipes) => {
+    //             console.log(recipes)
+    //             setRecipes(recipes)
+    //             });
+    //         }
+    //     });
+    // }, []);
 
 
     return (
@@ -36,11 +36,6 @@ function RecipeResults({user, setUser}) {
                         <Recipe key={recipe.id} recipe={recipe} />
                     ))}
                 </ImageList>
-                {/* {recipes.map((recipe) => (
-                    <div>
-                    <Recipe key={recipe.id} recipe={recipe}/>
-                    </div>
-                ))} */}
             </Grid>
             </Grid>
         </div>

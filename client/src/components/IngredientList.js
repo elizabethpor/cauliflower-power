@@ -9,7 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Button } from "../styles";
 
-function IngredientList({ingredients, user, setUser, setSelectedIngredients}) {
+function IngredientList({ingredients, user, setUser, setSelectedIngredients, onSubmitIngredients}) {
 
     function onIngredientToggle(ingredient) {
         setSelectedIngredients(currentIngredients => {
@@ -18,6 +18,11 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients}) {
             } else {
             return [...currentIngredients, ingredient]}
         })
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        onSubmitIngredients()
     }
 
     return (
@@ -29,7 +34,7 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients}) {
 
                 <h1>What do you have in your fridge?</h1>
                 <h3>- select your ingredients -</h3>
-
+                <form onSubmit={handleSubmit}>
                 <ImageList sx={{ width: 1000, height: 800 }} cols={4}>
                     <br></br>
                     <ImageListItem key="Subheader" cols={4}>
@@ -39,7 +44,10 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients}) {
                     ))}
                 </ImageList>
                 <br></br>
-                <Button type="submit" as={Link} to="/recipe-results">Submit selection</Button>
+                <Button type="submit">Submit selection</Button>
+
+                {/* <Button type="submit" as={Link} to="/recipe-results">Submit selection</Button> */}
+                </form>
             </Grid>
         </Grid>
     );

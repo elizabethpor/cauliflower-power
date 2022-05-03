@@ -3,7 +3,13 @@ class RecipesController < ApplicationController
 rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
-        render json: Recipe.all
+        #take params, convert them to array, assign array to variable. 
+        #use variable in where, column being ingredient_list
+        # Model.where(:column => ["value", "other_value"]
+        selected_ingredients = params[:ingredients].split(",")
+        recipes = Recipe.by_ingredient(selected_ingredients)
+        # recipes = Recipe.where(:ingredients => [params[:ingredients].split(" ")])
+        render json: recipes
     end
 
     def show
