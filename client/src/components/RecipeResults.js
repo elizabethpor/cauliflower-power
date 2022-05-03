@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Grid from '@mui/material/Grid';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -6,20 +6,6 @@ import Recipe from "./Recipe";
 import RRNavBar from "./RRNavBar";
 
 function RecipeResults({user, setUser, recipes, setSelectedIngredients}) {
-
-    // const [recipes, setRecipes] = useState([]);
-
-    // useEffect(() => {
-    //     fetch("/recipes").then((r) => {
-    //         if (r.ok) {
-    //             r.json().then((recipes) => {
-    //             console.log(recipes)
-    //             setRecipes(recipes)
-    //             });
-    //         }
-    //     });
-    // }, []);
-
 
     return (
         <div>

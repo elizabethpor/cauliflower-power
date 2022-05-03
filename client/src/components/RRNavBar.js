@@ -31,8 +31,6 @@ function RRNavBar({user, setUser, setSelectedIngredients}) {
             <br></br>
             <br></br>
             <Button onClick={handleBackClick}>Back to ingredients</Button>
-
-            {/* <Button as={Link} to="/ingredients" exact>Back to ingredients</Button> */}
             <br></br>
             <br></br>
             <br></br>
