@@ -13,10 +13,18 @@ function Home({user, setUser, setSelectedIngredients}) {
         </Grid>
         <Grid item xs={10} md={10}>
           <h1>home</h1>
-          <p>Welcome to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+          {/* <p>Welcome to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
             This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
             To access the app features please click the login button on the left and start your journey!
-          </p>
+          </p> */}
+          {!user ?  <p>Welcome to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
+            To access the app features please click the login button on the left and start your journey!
+          </p> :
+            <p>Welcome back CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
+            To access the app features please click the "Ingredients list" button on the left and start your journey!
+          </p>}
         </Grid>
       </Grid>
     );
