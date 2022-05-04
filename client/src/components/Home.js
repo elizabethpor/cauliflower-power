@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import NavBar from "./NavBar";
 
-function Home({user, setUser}) {
+function Home({user, setUser, setSelectedIngredients}) {
   
     return (
       <Grid container spacing={2}>
         <Grid item xs={2} md={2}>
-          <NavBar user={user} setUser={setUser}/>
+          <NavBar user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
         </Grid>
         <Grid item xs={10} md={10}>
           <h1>home</h1>

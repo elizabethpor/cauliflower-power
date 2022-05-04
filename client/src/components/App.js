@@ -62,7 +62,7 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path="/">
-          <Home user={user} setUser={setUser}/> 
+          <Home user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/> 
         </Route>
         <Route exact path="/login">
           <Login onLogin={setUser} />

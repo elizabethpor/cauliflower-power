@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Button } from "../styles";
 
 
-function NavBar({ user, setUser}) {
+function NavBar({ user, setUser, setSelectedIngredients}) {
     const history = useHistory();
     
     function handleLogoutClick() {
@@ -16,15 +16,27 @@ function NavBar({ user, setUser}) {
         });
     }
 
+    function handleClick() {
+        setSelectedIngredients([])
+        history.push("/ingredients")
+    }
+
     return (
         <>
 
             {!user ? <Button as={Link} to="/login" exact>
             Login
             </Button> :
+            <>
             <Button variant="outline" onClick={handleLogoutClick}>
             Logout
-            </Button>}
+            </Button>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Button onClick={handleClick}>Ingredients list</Button>
+            </>}
             <br></br>
             <br></br>
             <br></br>
