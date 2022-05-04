@@ -4,11 +4,10 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
         #take params, convert them to array, assign array to variable. 
-        #use variable in where, column being ingredient_list
-        # Model.where(:column => ["value", "other_value"]
+        #use method select_by_ingredients to find recipes and pass in the variable as argument
+        #to find the recipes that contain those ingredients.
         selected_ingredients = params[:ingredients].split(",")
-        recipes = Recipe.by_ingredient(selected_ingredients)
-        # recipes = Recipe.where(:ingredients => [params[:ingredients].split(" ")])
+        recipes = Recipe.select_by_ingredients(selected_ingredients)
         render json: recipes
     end
 
