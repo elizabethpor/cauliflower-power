@@ -40,7 +40,14 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
                     <ImageListItem key="Subheader" cols={4}>
                     </ImageListItem>
                     {ingredients.map((ingredient) => (
+                        <>
                         <FormControlLabel key={ingredient.id} control={<Checkbox onChange={() => onIngredientToggle(ingredient.name)}/>} label={ingredient.name} />
+                        </>
+                    ))}
+                    {ingredients.map((ingredient) => (
+                        <>
+                        <img src={ingredient.image} alt={ingredient.name}></img>
+                        </>
                     ))}
                 </ImageList>
                 <br></br>
