@@ -1,40 +1,64 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import header from "../assets/header.png";
 
 function Header() {
-// add some logic: if logged in link to "/ingredients", if not logged in link to "/"
     return (
         <div>
             <Wrapper>
-                <AppTitle>
-                    <Link to="/" exact>CauliflowerPower</Link>
-                </AppTitle>
+                <Link to="/" exact>
+                    <Img src={header} alt="header banner"></Img>
+                    <AppTitle>CauliflowerPower</AppTitle>
+                </Link>
+
             </Wrapper>
         </div>
     )
 };
 
-
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 8px;
 const Wrapper = styled.header`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
     `;
 
-    const AppTitle = styled.h1`
-    font-family: 'Tapestry', cursive;
-    font-weight: lighter;
-    font-size: 4rem;
-    color: royalBlue;
-    margin: 0;
-    line-height: 1;
+    // height: 300px;
+    // width: 100%;
+const Img = styled.img`
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+`;
 
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
+// font-family: 'Tapestry', cursive;
+// font-weight: lighter;
+// font-size: 4rem;
+// color: royalBlue;
+// margin: 0;
+// line-height: 1;
+
+// a {
+//     color: inherit;
+//     text-decoration: none;
+// }
+    const AppTitle = styled.h1`
+    font-family: 'Caveat', cursive;
+    font-size: 100px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin: auto;
     `;
 
 export default Header;
