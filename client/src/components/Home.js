@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 function Home({user, setUser, setSelectedIngredients}) {
   
     return (
-      <Grid container spacing={2}>
+      <Grid container spacing={2} ml={2}>
         <Grid item xs={2} md={2}>
           <NavBar user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
         </Grid>

@@ -24,7 +24,8 @@ function Header() {
 const Wrapper = styled.header`
     height: 100%;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
+    margin: 2%;
     `;
 
     // height: 300px;
