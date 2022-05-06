@@ -122,7 +122,7 @@ mediterranean_salad = Recipe.create(name: "Mediterranean salad", allergy_code: "
 
 puts "Seeding ingredients..."
 
-broccoli = Ingredient.create(name: "broccoli", image: "images/broccoli.jpg")
+broccoli = Ingredient.create(name: "broccoli", image: "/images/broccoli.jpg")
 carrot = Ingredient.create(name: "carrot")
 asparagus = Ingredient.create(name: "asparago", image: "https://images.pexels.com/photos/539431/pexels-photo-539431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
 garlic = Ingredient.create(name: "garlic")
