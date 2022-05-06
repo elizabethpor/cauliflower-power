@@ -44,11 +44,11 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
                         <FormControlLabel key={ingredient.id} control={<Checkbox onChange={() => onIngredientToggle(ingredient.name)}/>} label={ingredient.name} />
                         </>
                     ))}
-                    {ingredients.map((ingredient) => (
+                    {/* {ingredients.map((ingredient) => (
                         <>
                         <img src={ingredient.image} alt={ingredient.name}></img>
                         </>
-                    ))}
+                    ))} */}
                 </ImageList>
                 <br></br>
                 <Button type="submit">Submit selection</Button>
