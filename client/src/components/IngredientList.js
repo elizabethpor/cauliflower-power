@@ -32,7 +32,7 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
             </Grid>
             <Grid item xs={10} md={10}>
 
-                <h1>What do you have in your frigorifero?</h1>
+                <h1>What do you have in your fridge?</h1>
                 <h3>- select your ingredients -</h3>
                 <form onSubmit={handleSubmit}>
                 <ImageList sx={{ width: 1000, height: 800 }} cols={4}>
