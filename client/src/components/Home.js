@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Grid from '@mui/material/Grid';
+import styled from "styled-components";
 import NavBar from "./NavBar";
 
 function Home({user, setUser, setSelectedIngredients}) {
@@ -10,18 +11,33 @@ function Home({user, setUser, setSelectedIngredients}) {
           <NavBar user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
         </Grid>
         <Grid item xs={10} md={10}>
-          <h1>home</h1>
-          {!user ?  <p >Welcome to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
-            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
+          {!user ?  <><H1>Welcome!</H1><p> This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste.
+            <br></br>
+            <br></br>
+            This project originated from a recipe e-book I wrote a couple of years ago, titled Comida. 
+            <br></br>
+            <br></br>
+            You can learn more about the book and purchase it by clicking the button on the left. 
+            <br></br>
+            <br></br>
             To access the app features please click the login button on the left and start your journey!
-          </p> :
-            <p >Welcome back to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
-            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
+            
+          </p> </> :
+            <><h1>Welcome back!</h1><p > The app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            <br></br>
+            <br></br>
+            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left.
+            <br></br>
+            <br></br>
             To access the app features please click the "Ingredients list" button on the left and start your journey!
-          </p>}
+          </p></> }
         </Grid>
       </Grid>
     );
   }
   
+  const H1 = styled.h1`
+  text-align: left;
+  `;
+
   export default Home;
