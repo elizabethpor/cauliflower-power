@@ -4,7 +4,6 @@ import NavBar from "./NavBar";
 
 function Home({user, setUser, setSelectedIngredients}) {
   
-  // item xs direction="column"
     return (
       <Grid container spacing={2} wrap="wrap">
         <Grid item xs={2} md={2}>
@@ -16,7 +15,7 @@ function Home({user, setUser, setSelectedIngredients}) {
             This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
             To access the app features please click the login button on the left and start your journey!
           </p> :
-            <p >Welcome back CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            <p >Welcome back to CauliflowerPower - the app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
             This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left. 
             To access the app features please click the "Ingredients list" button on the left and start your journey!
           </p>}
