@@ -36,7 +36,7 @@ const Wrapper = styled.footer`
     width: 100%;
     // color: white;
     text-align: center;
-
+    
     `;
 const Img = styled.img`
     object-fit: cover;

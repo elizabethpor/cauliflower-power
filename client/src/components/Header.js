@@ -9,17 +9,13 @@ function Header() {
             <Wrapper>
                 <Link to="/" exact>
                     <Img src={header} alt="header banner"></Img>
-                    {/* <AppTitle>CauliflowerPower</AppTitle> */}
                 </Link>
 
             </Wrapper>
     )
 };
 
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // padding: 8px;
+
 const Wrapper = styled.header`
     height: 100%;
     width: 100%;
@@ -27,27 +23,17 @@ const Wrapper = styled.header`
     overflow: hidden;
     margin-bottom: 2%;
     display: flex;
+  flex-wrap: wrap;
     `;
 
-    // height: 300px;
-    // width: 100%;
+
 const Img = styled.img`
     object-fit: cover;
     width: 100%;
     height: 100%;
 `;
 
-// font-family: 'Tapestry', cursive;
-// font-weight: lighter;
-// font-size: 4rem;
-// color: royalBlue;
-// margin: 0;
-// line-height: 1;
 
-// a {
-//     color: inherit;
-//     text-decoration: none;
-// }
     const AppTitle = styled.h1`
     font-family: 'Caveat', cursive;
     font-size: 100px;
