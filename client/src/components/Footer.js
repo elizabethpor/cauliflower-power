@@ -30,7 +30,7 @@ const Wrapper = styled.footer`
     padding: 1%;
     // background-color: #C93818;
     background-color: #1E3149;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
