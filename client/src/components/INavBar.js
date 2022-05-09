@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { Button } from "../styles";
 
 function INavBar({user, setUser}) {
@@ -18,10 +17,7 @@ function INavBar({user, setUser}) {
 
     return (
         <>
-
-        {/* <Nav> */}
-
-            <Button as={Link} to="/comida-book" exact>Comida book </Button>
+            <Button as={Link} to="/comida-book" exact>Book</Button>
             <br></br>
             <br></br>
             <br></br>
@@ -32,27 +28,8 @@ function INavBar({user, setUser}) {
             <br></br>
             <br></br>
             <Button variant="outline" onClick={handleLogoutClick}>Logout</Button>
-
-
-        {/* </Nav> */}
-
         </>
     );
     }
-
-    const Wrapper = styled.header`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    `;
-
-
-    // const Nav = styled.nav`
-    // display: flex;
-    // gap: 4px;
-    // position: absolute;
-    // right: 8px;
-    // `;
 
 export default INavBar;

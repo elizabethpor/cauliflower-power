@@ -25,7 +25,7 @@ function RDNavBar({user, setUser}) {
             <br></br>
             <br></br>
             <br></br>
-            <Button as={Link} to="/recipe-results" exact>Back to search results</Button>
+            <Button as={Link} to="/recipe-results" exact>Back</Button>
             <br></br>
             <br></br>
             <br></br>

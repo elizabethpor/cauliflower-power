@@ -8,7 +8,7 @@ function StapleIngredients({user, setUser}) {
 
     return (
         <div>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} wrap="wrap">
                 <Grid item xs={2} md={2}>
                     <SINavBar  user={user} setUser={setUser}/>
                 </Grid>
@@ -17,6 +17,9 @@ function StapleIngredients({user, setUser}) {
                 <br></br>
                 <h3>- good to have handy in your pantry -</h3>
                 <br></br>
+                <Grid container spacing={4} wrap="wrap">
+                <Grid item xs={5} md={5}>
+                    <>
                 <h2>Oils:</h2>
                 <ul>
                     <li>coconut oil</li>
@@ -69,6 +72,10 @@ function StapleIngredients({user, setUser}) {
                     <li>tomatoes: diced</li>
                     <li>tomatoes: fire roasted</li>
                 </ul>
+                </>
+                </Grid>
+                <Grid item xs={5} md={5}>
+                <>
                 <h2>Dried fruit/legumes/nuts:</h2>
                 <ul>
                     <li>apricots</li>
@@ -118,6 +125,9 @@ function StapleIngredients({user, setUser}) {
                     <li>rosemary</li>
                     <li>thyme</li>
                 </ul>
+                </>
+                </Grid>
+                </Grid>
                 </Grid>
             </Grid>
         </div>

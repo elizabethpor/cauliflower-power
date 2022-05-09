@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import INavBar from "./INavBar";
 import ImageList from '@mui/material/ImageList';
@@ -26,17 +24,15 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
     }
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} wrap="wrap">
             <Grid item xs={2} md={2}>
                 <INavBar user={user} setUser={setUser}/>
             </Grid>
             <Grid item xs={10} md={10}>
-
                 <h1>What do you have in your fridge?</h1>
                 <h3>- select your ingredients -</h3>
                 <form onSubmit={handleSubmit}>
                 <ImageList sx={{ width: 1000, height: 800 }} cols={4}>
-                    <br></br>
                     <ImageListItem key="Subheader" cols={4}>
                     </ImageListItem>
                     {ingredients.map((ingredient) => (
@@ -44,16 +40,9 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
                         <FormControlLabel key={ingredient.id} control={<Checkbox onChange={() => onIngredientToggle(ingredient.name)}/>} label={ingredient.name} />
                         </>
                     ))}
-                    {/* {ingredients.map((ingredient) => (
-                        <>
-                        <img src={ingredient.image} alt={ingredient.name}></img>
-                        </>
-                    ))} */}
                 </ImageList>
                 <br></br>
                 <Button type="submit">Submit selection</Button>
-
-                {/* <Button type="submit" as={Link} to="/recipe-results">Submit selection</Button> */}
                 </form>
             </Grid>
         </Grid>

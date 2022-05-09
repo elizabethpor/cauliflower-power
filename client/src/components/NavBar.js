@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { Button } from "../styles";
 
 
@@ -23,7 +22,6 @@ function NavBar({ user, setUser, setSelectedIngredients}) {
 
     return (
         <>
-
             {!user ? <Button as={Link} to="/login" exact>
             Login
             </Button> :
@@ -35,31 +33,15 @@ function NavBar({ user, setUser, setSelectedIngredients}) {
             <br></br>
             <br></br>
             <br></br>
-            <Button onClick={handleClick}>Ingredients list</Button>
+            <Button onClick={handleClick}>Fresh ingredients</Button>
             </>}
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            <Button as={Link} to="/comida-book" exact>Comida book </Button>
-
+            <Button as={Link} to="/comida-book" exact>Book</Button>
         </>
     );
     }
-
-    const Wrapper = styled.header`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    `;
-
-
-    // const Nav = styled.nav`
-    // display: flex;
-    // gap: 4px;
-    // position: absolute;
-    // right: 8px;
-    // `;
 
     export default NavBar;

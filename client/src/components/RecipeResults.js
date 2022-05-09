@@ -9,7 +9,7 @@ function RecipeResults({user, setUser, recipes, setSelectedIngredients}) {
 
     return (
         <div>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} wrap="wrap">
             <Grid item xs={2} md={2}>
                 <RRNavBar  user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
             </Grid>

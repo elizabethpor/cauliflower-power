@@ -10,7 +10,7 @@ function ComidaBook({user, setUser}) {
 
     return (
         <div>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} wrap="wrap">
             <Grid item xs={2} md={2}>
                 <CBNavBar user={user} setUser={setUser}/>
             </Grid>
@@ -31,6 +31,8 @@ Whether you work in a restaurant or want to use this manual at home, I hope you 
 -Elizabeth</p>
 <br></br>
                 <ComidaPhotoGallery />
+                <br></br>
+                <br></br>
                 <Button as={Link} to="/checkout" exact>Purchase the e-book</Button>
             </Grid>
         </Grid>

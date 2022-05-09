@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Grid from '@mui/material/Grid';
-import styled from "styled-components";
 import NavBar from "./NavBar";
 
 function Home({user, setUser, setSelectedIngredients}) {
   
     return (
       <Grid container spacing={2} wrap="wrap">
-        <Grid item xs={2} md={2}>
+        <Grid item xs={2} md={2} >
           <NavBar user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
         </Grid>
-        <Grid item xs={10} md={10}>
-          {!user ?  <><H1>Welcome!</H1><p> This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste.
+        <Grid item xs={10} md={10} >
+          {!user ?  <><h1>Welcome!</h1><p> This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste.
             <br></br>
             <br></br>
             This project originated from a recipe e-book I wrote a couple of years ago, titled Comida. 
@@ -35,9 +34,5 @@ function Home({user, setUser, setSelectedIngredients}) {
       </Grid>
     );
   }
-  
-  const H1 = styled.h1`
-  text-align: left;
-  `;
 
   export default Home;

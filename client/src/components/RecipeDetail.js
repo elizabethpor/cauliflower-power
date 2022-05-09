@@ -28,7 +28,7 @@ function RecipeDetail({user, setUser}) {
 
     return (
         <div>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} wrap="wrap">
                 <Grid item xs={2} md={2}>
                     <RDNavBar  user={user} setUser={setUser}/>
             </Grid>

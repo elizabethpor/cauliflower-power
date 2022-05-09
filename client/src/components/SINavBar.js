@@ -17,7 +17,7 @@ function SINavBar({user, setUser}) {
     }
     return (
         <div>
-            <Button as={Link} to="/ingredients" exact>Back to ingredients</Button>
+            <Button as={Link} to="/ingredients" exact>Fresh ingredients</Button>
             <br></br>
             <br></br>
             <br></br>

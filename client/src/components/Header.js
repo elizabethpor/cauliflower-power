@@ -21,9 +21,9 @@ const Wrapper = styled.header`
     width: 100%;
     position: relative;
     overflow: hidden;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     `;
 
 

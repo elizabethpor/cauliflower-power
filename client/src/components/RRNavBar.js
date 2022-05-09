@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { Button } from "../styles";
 
 function RRNavBar({user, setUser, setSelectedIngredients}) {
@@ -30,7 +29,7 @@ function RRNavBar({user, setUser, setSelectedIngredients}) {
             <br></br>
             <br></br>
             <br></br>
-            <Button onClick={handleBackClick}>Back to ingredients</Button>
+            <Button onClick={handleBackClick}>Fresh ingredients</Button>
             <br></br>
             <br></br>
             <br></br>

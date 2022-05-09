@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { Button } from "../styles";
 
 function CBNavBar({user, setUser}) {
@@ -19,10 +18,10 @@ function CBNavBar({user, setUser}) {
 
         <div>
             {!user ?
-                <Button as={Link} to="/">Back to home</Button>
+                <Button as={Link} to="/">Back</Button>
                 :
                 <>
-                <Button as={Link} to="/ingredients" exact>Back to ingredients</Button>
+                <Button as={Link} to="/ingredients" exact>Back</Button>
                 <br></br>
                 <br></br>
                 <br></br>
