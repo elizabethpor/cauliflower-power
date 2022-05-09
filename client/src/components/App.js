@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 import Home from "./Home";
 import Login from "./Login";
 import IngredientList from "./IngredientList";
@@ -92,6 +93,7 @@ function App() {
           <Canceled />
         </Route>
       </Switch>
+      <Footer/>
     </>
   );
 };

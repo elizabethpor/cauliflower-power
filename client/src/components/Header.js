@@ -5,15 +5,14 @@ import header from "../assets/header.png";
 
 function Header() {
     return (
-        <div>
+
             <Wrapper>
                 <Link to="/" exact>
                     <Img src={header} alt="header banner"></Img>
-                    <AppTitle>CauliflowerPower</AppTitle>
+                    {/* <AppTitle>CauliflowerPower</AppTitle> */}
                 </Link>
 
             </Wrapper>
-        </div>
     )
 };
 
@@ -23,9 +22,11 @@ function Header() {
     // padding: 8px;
 const Wrapper = styled.header`
     height: 100%;
+    width: 100%;
     position: relative;
-    // overflow: hidden;
-    margin: 2%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    display: flex;
     `;
 
     // height: 300px;
