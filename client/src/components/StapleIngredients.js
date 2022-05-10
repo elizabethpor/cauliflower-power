@@ -14,7 +14,6 @@ function StapleIngredients({user, setUser}) {
                 </Grid>
                 <Grid item xs={10} md={10}>
                 <h1>Staple ingredients</h1>
-                <br></br>
                 <h3>- good to have handy in your pantry -</h3>
                 <br></br>
                 <Grid container spacing={4} wrap="wrap">

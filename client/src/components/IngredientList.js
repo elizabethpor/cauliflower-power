@@ -33,8 +33,6 @@ function IngredientList({ingredients, user, setUser, setSelectedIngredients, onS
                 <h3>- select your ingredients -</h3>
                 <form onSubmit={handleSubmit}>
                 <ImageList sx={{ width: 1000, height: 800 }} cols={4}>
-                    <ImageListItem key="Subheader" cols={4}>
-                    </ImageListItem>
                     {ingredients.map((ingredient) => (
                         <>
                         <FormControlLabel key={ingredient.id} control={<Checkbox onChange={() => onIngredientToggle(ingredient.name)}/>} label={ingredient.name} />

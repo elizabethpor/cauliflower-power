@@ -14,10 +14,7 @@ function RecipeResults({user, setUser, recipes, setSelectedIngredients}) {
                 <RRNavBar  user={user} setUser={setUser} setSelectedIngredients={setSelectedIngredients}/>
             </Grid>
             <Grid item xs={10} md={10}>
-            <ImageList sx={{ width: 1000, height: 800 }} cols={3}>
-                    <br></br>
-                    <ImageListItem key="Subheader" cols={3}>
-                    </ImageListItem>
+            <ImageList sx={{ width: 1000, height: 400 }} cols={4} gap={8}>
                     {recipes.map((recipe) => (
                         <Recipe key={recipe.id} recipe={recipe} />
                     ))}

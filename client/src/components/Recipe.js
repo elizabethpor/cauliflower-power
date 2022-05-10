@@ -12,12 +12,13 @@ function Recipe({recipe}) {
     return (
         <ImageListItem key={recipe.id}>
             <ImageListItemBar
+            sx={{ background: '#1E3149' }}
                 title={recipe.name}
                 subtitle={recipe.allergy_code}
                 actionIcon={
                     <Link to={`/recipes/${id}`}>
                     <IconButton 
-                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                    sx={{ color: '#C93818' }}
                     aria-label={`info about ${recipe.name}`}
                     >
                     <InfoIcon />
