@@ -22,7 +22,7 @@ function Home({user, setUser, setSelectedIngredients}) {
             To access the app features please click the "Login" button on the left and start your journey!
             
           </p> </> :
-            <><h1>Welcome back!</h1><p > The app designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            <><h1>Welcome back!</h1><p > This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
             <br></br>
             <br></br>
             This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left.

@@ -19,6 +19,8 @@ const ProductDisplay = () => (
         </div>
         <form action="/charges" method="POST">
         <Button type="submit">Checkout</Button>
+        <br></br>
+        <br></br>
         <Button as={Link} to="/comida-book" exact>Back</Button>
         </form>
     </section>
