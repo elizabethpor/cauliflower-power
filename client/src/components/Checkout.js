@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import "./App.css";
+import styled from "styled-components";
 import { Button } from "../styles";
 import cover from "../assets/cover.jpg"
 
 const ProductDisplay = () => (
+    <Wrapper>
     <section>
         <div className="product">
-        <img 
-            class="w-10"
+        <Img 
             src={cover}
             alt="The cover of Comida book"
         />
         <div className="description">
-        <h3>Comida book</h3>
+        <h3>e-book</h3>
         <h5>$15.00</h5>
         </div>
         </div>
@@ -22,6 +22,7 @@ const ProductDisplay = () => (
         <Button as={Link} to="/comida-book" exact>Back</Button>
         </form>
     </section>
+    </Wrapper>
 );
 
 const Message = ({ message }) => (
@@ -54,4 +55,14 @@ function Checkout() {
         <ProductDisplay />
     );
 }
+
+const Wrapper = styled.form`
+    text-align: center;
+`;
+
+const Img = styled.img`
+    width: 300px;
+    height: auto;
+`;
+
 export default Checkout;
