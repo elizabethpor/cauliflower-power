@@ -17,6 +17,21 @@ class UsersController < ApplicationController
             end
         end
     
+        #POST /add_fav_recipe
+        def add_fav_recipe
+            user = User.find(session[:user_id])
+            fav_recipe = Recipe.find(params[:id])
+            user.recipes << fav_recipe
+        end
+        
+        #DESTROY /remove_fav_recipe
+        def remove_fav_recipe
+            user = User.find(session[:user_id])
+            unfavd_recipe = Recipe.find(params[:id])
+            byebug
+            user.recipes.find(unfavd_recipe.id).destroy
+        end
+
         private
     
         def user_params
