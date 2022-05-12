@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         def remove_fav_recipe
             user = User.find(session[:user_id])
             unfavd_recipe = Recipe.find(params[:id])
-            byebug
+            
             user.recipes.find(unfavd_recipe.id).destroy
         end
 

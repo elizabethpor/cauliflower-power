@@ -45,7 +45,8 @@ function RecipeDetail({user, setUser}) {
       headers: {
           "Content-Type": "application/json",
       },
-      body: JSON.stringify(recipe.id)
+      // body: JSON.stringify(recipe.id)
+      body: JSON.stringify({})
   })
       .then((r) => r.json())
       .then(data => console.log(data));
