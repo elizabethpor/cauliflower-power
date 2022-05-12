@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             user = User.find(session[:user_id])
             fav_recipe = Recipe.find(params[:id])
             user.recipes << fav_recipe
-            render json: user.recipes
+            render json: user
         end
         
         #DESTROY /remove_fav_recipe
