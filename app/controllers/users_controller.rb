@@ -22,14 +22,15 @@ class UsersController < ApplicationController
             user = User.find(session[:user_id])
             fav_recipe = Recipe.find(params[:id])
             user.recipes << fav_recipe
+            render json: user.recipes
         end
         
         #DESTROY /remove_fav_recipe
         def remove_fav_recipe
             user = User.find(session[:user_id])
             unfavd_recipe = Recipe.find(params[:id])
-            
             user.recipes.find(unfavd_recipe.id).destroy
+            head :no_content
         end
 
         private

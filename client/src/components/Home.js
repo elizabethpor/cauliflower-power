@@ -4,6 +4,10 @@ import NavBar from "./NavBar";
 
 function Home({user, setUser, setSelectedIngredients}) {
   
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
     return (
       <Grid container spacing={2} wrap="wrap">
         <Grid item xs={2} md={2} >
@@ -22,13 +26,13 @@ function Home({user, setUser, setSelectedIngredients}) {
             To access the app features please click the "Login" button on the left and start your journey!
             
           </p> </> :
-            <><h1>Welcome back!</h1><p > This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
+            <><h1>Welcome back {capitalizeFirstLetter(user.username)}!</h1><p > This app is designed to help you cook nutritious, wholesome, affordable food and reduce food waste. 
             <br></br>
             <br></br>
-            This project originated from a recipe book I wrote a couple of years ago. You can learn more about the book and purchase it by clicking the button on the left.
+            Click the "Fresh ingredients" button on the left to continue your yummy journey...
             <br></br>
             <br></br>
-            To access the app features please click the "Fresh ingredients" button on the left and start your journey!
+            ...and don't forget to check out the e-book!
           </p></> }
         </Grid>
       </Grid>

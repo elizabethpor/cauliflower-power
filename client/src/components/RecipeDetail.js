@@ -29,27 +29,27 @@ function RecipeDetail({user, setUser}) {
 
   function handleUnfavor() {
     setIsFavorite(false)
-    //delete
-    fetch(`/remove-fav-recipe/${recipe.id}`, {
-      method: "DELETE",
-  })
-      .then((r) => r.json())
-      .then((unfavoredRecipe) => console.log(unfavoredRecipe));
+  //   //delete
+  //   fetch(`/remove-fav-recipe/${recipe.id}`, {
+  //     method: "DELETE",
+  // })
+      // .then((r) => r.json())
+      // .then((unfavoredRecipe) => console.log(unfavoredRecipe));
   };
 
   function handleFavor() {
     setIsFavorite(true)
     // post
-    fetch(`/add-fav-recipe/${recipe.id}`, {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
+    // fetch(`/add-fav-recipe/${recipe.id}`, {
+    //   method: "POST",
+    //   headers: {
+    //       "Content-Type": "application/json",
+    //   },
       // body: JSON.stringify(recipe.id)
-      body: JSON.stringify({})
-  })
-      .then((r) => r.json())
-      .then(data => console.log(data));
+  //     body: JSON.stringify({})
+  // })
+  //     .then((r) => r.json())
+  //     .then(data => console.log(data));
   };
 
     return (
@@ -72,8 +72,6 @@ function RecipeDetail({user, setUser}) {
                 </ul>
                 <h2>Instructions</h2>
                 <p>{recipe.instructions}</p>
-
-                {/* <Button onClick={handleClick}>{isFavorite ? "Save as favorite" : "Saved as favorite"}</Button> */}
             </Grid>
             </Grid>
         </div>
