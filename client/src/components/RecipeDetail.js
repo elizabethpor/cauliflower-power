@@ -27,18 +27,18 @@ function RecipeDetail({user, setUser}) {
 
   const ingredients = recipe.ingredient_list.map((ingredient) => <li>{ingredient}</li>);
 
-  function handleUnfavor() {
-    setIsFavorite(false)
+  // function handleUnfavor() {
+  //   setIsFavorite(false)
   //   //delete
   //   fetch(`/remove-fav-recipe/${recipe.id}`, {
   //     method: "DELETE",
   // })
       // .then((r) => r.json())
       // .then((unfavoredRecipe) => console.log(unfavoredRecipe));
-  };
+  // };
 
-  function handleFavor() {
-    setIsFavorite(true)
+  // function handleFavor() {
+  //   setIsFavorite(true)
     // post
     // fetch(`/add-fav-recipe/${recipe.id}`, {
     //   method: "POST",
@@ -50,7 +50,7 @@ function RecipeDetail({user, setUser}) {
   // })
   //     .then((r) => r.json())
   //     .then(data => console.log(data));
-  };
+  // };
 
     return (
         <div>
@@ -61,11 +61,11 @@ function RecipeDetail({user, setUser}) {
             <Grid item xs={10} md={10}>
                 <h1>{recipe.name}</h1>
                 <h3>{recipe.allergy_code}</h3>
-                {isFavorite ? 
+                {/* {isFavorite ? 
               <Button variant="fill" onClick={handleUnfavor}>Saved as favorite</Button>
               :
               <Button variant="outline" onClick={handleFavor}>Save as favorite</Button>
-              }
+              } */}
                 <h2>Ingredients list:</h2>
                 <ul>
                     {ingredients}
