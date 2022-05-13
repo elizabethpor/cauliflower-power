@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
     puts Stripe.api_key
       session = Stripe::Checkout::Session.create({
         line_items: [{
-          price: 'price_1KtYfsDg1tW1NT2Z5Od40r91',
+          price: 'price_1Kz0K4Dg1tW1NT2ZBhHlZTaG',
           quantity: 1,
         }],
         mode: 'payment',

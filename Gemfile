@@ -29,7 +29,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'stripe'
 
 #dot-env
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails', :groups => [:development, :test, :production]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
