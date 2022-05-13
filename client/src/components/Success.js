@@ -10,7 +10,7 @@ const Success = () => {
                 <div className="sr-header__logo"></div>
                 </header>
                 <div className="sr-payment-summary completed-view">
-                <h1>Your payment succeeded</h1>
+                <h1>Thank you for your purchase! You will receive an email with the e-book shortly</h1>
                 </div>
                 <div className="sr-section completed-view">
                 {/* work in progress: add the ability to download PDF after purchase */}
