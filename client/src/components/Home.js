@@ -8,6 +8,9 @@ function Home({user, setUser, setSelectedIngredients}) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
   
+  const queryParams = new URLSearchParams(window.location.search)
+  const canceled = queryParams.get("canceled")
+
     return (
       <Grid container spacing={2} wrap="wrap">
         <Grid item xs={2} md={2} >
@@ -34,6 +37,10 @@ function Home({user, setUser, setSelectedIngredients}) {
             <br></br>
             ...and don't forget to check out the e-book!
           </p></> }
+          <div>
+            {canceled ? "payment canceled" : "hi"}
+          </div>
+
         </Grid>
       </Grid>
     );
