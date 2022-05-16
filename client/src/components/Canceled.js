@@ -11,7 +11,7 @@ const Canceled = () => {
                 </header>
                 <div className="sr-payment-summary completed-view">
                 <h1>Your payment was canceled</h1>
-                <Button as={Link} to="/" exact>Back to home</Button>
+                <Button as={Link} to="/" exact>Home</Button>
                 </div>
             </div>
         </div>
