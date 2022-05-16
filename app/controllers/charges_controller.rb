@@ -10,10 +10,10 @@ class ChargesController < ApplicationController
           quantity: 1,
         }],
         mode: 'payment',
-        success_url: 'http://localhost:4000/' + '?success=true',
-        cancel_url: 'http://localhost:4000/' + '?canceled=true',
-        # success_url: 'https://cauliflower-power.herokuapp.com/' + '?success=true',
-        # cancel_url: 'https://cauliflower-power.herokuapp.com/' + '?canceled=true',
+        # success_url: 'http://localhost:4000/' + '?success=true',
+        # cancel_url: 'http://localhost:4000/' + '?canceled=true',
+        success_url: 'https://cauliflower-power.herokuapp.com/' + '?success=true',
+        cancel_url: 'https://cauliflower-power.herokuapp.com/' + '?canceled=true',
       })
       redirect_to session.url, status: 303
     end
